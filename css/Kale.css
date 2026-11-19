@@ -1,0 +1,127 @@
+/* paleta de colores y variables */
+:root {
+    --color-burdeos: #33131F;
+    --color-vino: #521B2B;
+    --color-marfil: #F9F3E9;
+    --color-dorado: #CC9E4D;
+    --color-texto: #573B43;
+    --color-borde: #C9BDB3;
+    --font-principal: Arial, sans-serif;
+    --font-logo: Georgia, serif;
+}
+
+/* se aplica en toda la página */
+* {
+    margin: 0; /* espacio exterior entre elementos */
+    padding: 0; /* espacio interior entre el contenido y el borde */
+    box-sizing: border-box; /* para el tamaño de los elementos */
+    font-family: var(--font-principal); 
+}
+
+
+.header {
+    width: 100%; 
+    background-color: var(--color-marfil); 
+    position: sticky; /* mantiene el elemento fijo al desplazarse */
+    top: 0; /* distancia desde la parte superior */
+    z-index: 500; /* orden de superposición de los elementos */
+}
+
+
+.barra-anuncio {
+    background-color: var(--color-burdeos);
+    color: var(--color-dorado); /* color del texto */
+    text-align: center; /* alineación del texto */
+    padding: 10px;
+    font-size: 10px; /* tamaño de letra */
+    letter-spacing: 2px; /* separación entre letras */
+}
+
+
+.contenedor-header {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 20px 40px;
+    display: flex; /* pone los elementos en fila*/
+    justify-content: space-between; /* distribución de los elementos */
+    align-items: center; /* alineación vertical */
+}
+
+.logo {
+    color: var(--color-burdeos);
+    font-family: var(--font-logo);
+    font-size: 32px;
+    font-weight: normal; /* grosor de la letra */
+    letter-spacing: 8px;
+}
+
+
+.buscador {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* separación entre elementos */
+    width: 235px;
+    border-bottom: 1px solid var(--color-borde); /* borde inferior */
+    padding: 8px 0;
+    color: var(--color-texto);
+}
+
+
+.buscador input {
+    border: none; /* elimina el borde */
+    outline: none; /* elimina el contorno de selección */
+    background: transparent; /* fondo transparente */
+    width: 100%;
+    color: var(--color-texto);
+    font-size: 12px;
+}
+
+
+.buscador input::placeholder {
+    color: var(--color-texto);
+}
+
+
+.iconos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.iconos a {
+    text-decoration: none; /* decoración del texto */
+    color: var(--color-burdeos);
+    font-size: 17px;
+    transition: 0.3s; /* duración del cambio de estilo */
+}
+
+
+.iconos a:hover {/* efecto al pasar el mouse */
+    color: var(--color-dorado);
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 15px;
+}
+
+
+.menu a {
+    text-decoration: none;/* no subrayado */
+    color: var(--color-texto);
+    font-size: 11px;
+    font-weight: bold;/* texto en negrilla */
+    letter-spacing: 1px;
+}
+
+
+.menu a:hover {
+    color: var(--color-dorado);
+}
+
+
