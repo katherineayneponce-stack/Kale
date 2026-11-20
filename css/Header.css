@@ -1,3 +1,4 @@
+
 /* paleta de colores y variables */
 :root {
     --color-burdeos: #33131F;
@@ -10,25 +11,25 @@
     --font-logo: Georgia, serif;
 }
 
-/* se aplica en toda la página */
+/* configuración general */
 * {
-    margin: 0; /* espacio exterior entre elementos */
-    padding: 0; /* espacio interior entre el contenido y el borde */
-    box-sizing: border-box; /* para el tamaño de los elementos */
-    font-family: var(--font-principal); 
+    margin: 0; /* espacio exterior */
+    padding: 0; /* espacio interior */
+    box-sizing: border-box; /* incluye padding y borde en el tamaño */
+    font-family: var(--font-principal); /* tipo de letra */
 }
 
-
+/* bloque principal */
 .header {
-    width: 100%; 
-    background-color: var(--color-marfil); 
+    width: 100%; /* ancho del elemento */
+    background-color: var(--color-marfil); /* color de fondo */
     position: sticky; /* mantiene el elemento fijo al desplazarse */
     top: 0; /* distancia desde la parte superior */
-    z-index: 500; /* orden de superposición de los elementos */
+    z-index: 500; /* orden de superposición */
 }
 
-
-.barra-anuncio {
+/* elemento anuncio */
+.header__anuncio {
     background-color: var(--color-burdeos);
     color: var(--color-dorado); /* color del texto */
     text-align: center; /* alineación del texto */
@@ -37,17 +38,18 @@
     letter-spacing: 2px; /* separación entre letras */
 }
 
-
-.contenedor-header {
-    max-width: 1200px; 
+/* elemento contenedor */
+.header__contenedor {
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px 40px;
-    display: flex; /* pone los elementos en fila*/
-    justify-content: space-between; /* distribución de los elementos */
+    display: flex; /* organiza los elementos en fila */
+    justify-content: space-between; /* distribución de elementos */
     align-items: center; /* alineación vertical */
 }
 
-.logo {
+/* elemento logo */
+.header__logo {
     color: var(--color-burdeos);
     font-family: var(--font-logo);
     font-size: 32px;
@@ -55,8 +57,8 @@
     letter-spacing: 8px;
 }
 
-
-.buscador {
+/* elemento buscador */
+.header__buscador {
     display: flex;
     align-items: center;
     gap: 10px; /* separación entre elementos */
@@ -66,43 +68,46 @@
     color: var(--color-texto);
 }
 
-
-.buscador input {
+/* campo de texto */
+.header__campo {
     border: none; /* elimina el borde */
-    outline: none; /* elimina el contorno de selección */
+    outline: none; /* elimina el contorno */
     background: transparent; /* fondo transparente */
     width: 100%;
-    color: var(--color-texto);
     font-size: 12px;
 }
 
-
-.buscador input::placeholder {
+.header__campo::placeholder {
     color: var(--color-texto);
 }
 
+/* icono del buscador */
+.header__buscador-icono {
+    color: var(--color-texto);
+}
 
-.iconos {
+/* elemento iconos */
+.header__iconos {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-
-.iconos a {
-    text-decoration: none; /* decoración del texto */
+/* enlaces de los iconos */
+.header__enlace {
+    text-decoration: none; /* elimina el subrayado */
     color: var(--color-burdeos);
     font-size: 17px;
-    transition: 0.3s; /* duración del cambio de estilo */
+    transition: 0.3s; /* duración del cambio */
 }
 
-
-.iconos a:hover {/* efecto al pasar el mouse */
+/* efecto al pasar el mouse */
+.header__enlace:hover {
     color: var(--color-dorado);
 }
 
-
-.menu {
+/* elemento menú */
+.header__menu {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,18 +115,15 @@
     padding: 15px;
 }
 
-
-.menu a {
-    text-decoration: none;/* no subrayado */
+/* enlaces del menú */
+.header__menu-enlace {
+    text-decoration: none; /* elimina el subrayado */
     color: var(--color-texto);
     font-size: 11px;
-    font-weight: bold;/* texto en negrilla */
+    font-weight: bold; /* texto en negrilla */
     letter-spacing: 1px;
 }
 
-
-.menu a:hover {
+.header__menu-enlace:hover {
     color: var(--color-dorado);
 }
-
-
