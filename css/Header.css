@@ -11,7 +11,7 @@
     --font-logo: Georgia, serif;
 }
 
-/* configuración general */
+
 * {
     margin: 0; /* espacio exterior */
     padding: 0; /* espacio interior */
@@ -19,7 +19,7 @@
     font-family: var(--font-principal); /* tipo de letra */
 }
 
-/* bloque principal */
+
 .header {
     width: 100%; /* ancho del elemento */
     background-color: var(--color-marfil); /* color de fondo */
@@ -28,7 +28,7 @@
     z-index: 500; /* orden de superposición */
 }
 
-/* elemento anuncio */
+
 .header__anuncio {
     background-color: var(--color-burdeos);
     color: var(--color-dorado); /* color del texto */
@@ -38,7 +38,7 @@
     letter-spacing: 2px; /* separación entre letras */
 }
 
-/* elemento contenedor */
+
 .header__contenedor {
     max-width: 1200px;
     margin: 0 auto;
@@ -48,7 +48,7 @@
     align-items: center; /* alineación vertical */
 }
 
-/* elemento logo */
+
 .header__logo {
     color: var(--color-burdeos);
     font-family: var(--font-logo);
@@ -57,7 +57,7 @@
     letter-spacing: 8px;
 }
 
-/* elemento buscador */
+
 .header__buscador {
     display: flex;
     align-items: center;
@@ -68,7 +68,7 @@
     color: var(--color-texto);
 }
 
-/* campo de texto */
+
 .header__campo {
     border: none; /* elimina el borde */
     outline: none; /* elimina el contorno */
@@ -81,19 +81,18 @@
     color: var(--color-texto);
 }
 
-/* icono del buscador */
+
 .header__buscador-icono {
     color: var(--color-texto);
 }
 
-/* elemento iconos */
+
 .header__iconos {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-/* enlaces de los iconos */
 .header__enlace {
     text-decoration: none; /* elimina el subrayado */
     color: var(--color-burdeos);
@@ -106,7 +105,7 @@
     color: var(--color-dorado);
 }
 
-/* elemento menú */
+
 .header__menu {
     display: flex;
     justify-content: center;
