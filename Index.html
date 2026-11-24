@@ -1,65 +1,378 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KALE, joyería de plata 925 y baño de oro.">
     <title>KALE</title>
 
-    <link rel="stylesheet" href="css/Header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <!-- red de distribución que permite utilizar iconos de font awesome -->
+
+    <link rel="stylesheet" href="css/Main.css">
 </head>
+
 <body>
 
-<header class="header">
+    <header class="header">
 
-    <section class="header__anuncio">
-        <p class="header__texto">
-            ENVÍO GRATIS DESDE BS.300 · PLATA 925 CERTIFICADA · EMPAQUE DE REGALO INCLUIDO
-        </p>
-    </section>
+        <div class="header__anuncio" role="region" aria-label="Promociones y envío">
+            <p class="header__texto">
+                ENVÍO GRATIS DESDE BS.300 · PLATA 925 CERTIFICADA · EMPAQUE DE REGALO INCLUIDO
+            </p>
+        </div>
 
-  
-    <section class="header__contenedor">
+        <div class="header__contenedor">
 
-        <h1 class="header__logo">KALE</h1>
+            <h1 class="header__logo">KALE</h1>
 
-    
-        <search class="header__buscador">
-            <i class="header__buscador-icono fa-solid fa-magnifying-glass"></i>
-            <input class="header__campo" type="text" placeholder="Buscar joyas">
-        </search>
+            <search class="header__buscador">
+                <i class="header__buscador-icono fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                <input
+                    class="header__campo"
+                    type="search"
+                    placeholder="Buscar joyas"
+                    aria-label="Buscar joyas">
+            </search>
 
-      
-        <nav class="header__iconos">
-            <a class="header__enlace" href="#" aria-label="Ubicación">
-                <i class="fa-solid fa-location-dot"></i>
-            </a>
-            <a class="header__enlace" href="#" aria-label="Mi cuenta">
-                <i class="fa-regular fa-user"></i>
-            </a>
-            <a class="header__enlace" href="#" aria-label="Favoritos">
-                <i class="fa-regular fa-heart"></i>
-            </a>
-            <a class="header__enlace" href="#" aria-label="Bolsa">
-                <i class="fa-solid fa-bag-shopping"></i>
-            </a>
+            <nav class="header__iconos" aria-label="Accesos de usuario">
+
+                <a class="header__enlace" href="#" aria-label="Ubicación">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                </a>
+
+                <a class="header__enlace" href="#" aria-label="Mi cuenta">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
+                </a>
+
+                <a class="header__enlace" href="#" aria-label="Favoritos">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                </a>
+
+                <a class="header__enlace" href="#" aria-label="Carrito de compras">
+                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                </a>
+
+            </nav>
+
+        </div>
+
+        <nav class="header__menu" aria-label="Categorías de productos">
+
+            <a class="header__menu-enlace" href="#productos">NOVEDADES & DESTACADOS</a>
+            <a class="header__menu-enlace" href="#categorias">PULSERAS</a>
+            <a class="header__menu-enlace" href="#categorias">ANILLOS</a>
+            <a class="header__menu-enlace" href="#categorias">PENDIENTES</a>
+            <a class="header__menu-enlace" href="#categorias">COLLARES</a>
+            <a class="header__menu-enlace" href="#colecciones">COLECCIONES</a>
+
         </nav>
 
-    </section>
+    </header>
 
-    
-    <nav class="header__menu">
-        <a class="header__menu-enlace" href="#">NOVEDADES & DESTACADOS</a>
-        <a class="header__menu-enlace" href="#">PULSERAS</a>
-        <a class="header__menu-enlace" href="#">ANILLOS</a>
-        <a class="header__menu-enlace" href="#">PENDIENTES</a>
-        <a class="header__menu-enlace" href="#">COLLARES</a>
-        <a class="header__menu-enlace" href="#">COLECCIONES</a>
-    </nav>
 
-</header>
+   
+    <main class="main">
 
-<script src="js/main.js"></script>
-</body>
-</html>
+        <!-- banner principal -->
+        <section class="hero" aria-labelledby="hero-titulo">
+
+            <div class="hero__contenido">
+                <p class="hero__etiqueta">COLECCIÓN OTOÑO 2026</p>
+                <h2 class="hero__titulo" id="hero-titulo">
+                    Brillo sutil para momentos inolvidables
+                </h2>
+                <p class="hero__descripcion">
+                    Joyas de plata 925 y baño de oro diseñadas para acompañarte
+                    en cada momento especial.
+                </p>
+                <div class="hero__botones">
+                    <a class="hero__boton" href="#productos">
+                        EXPLORAR COLECCIÓN
+                    </a>
+                    <a class="hero__boton hero__boton--secundario" href="#productos">
+                        VER NOVEDADES
+                    </a>
+                </div>
+            </div>
+
+            <figure class="hero__figura">
+                <video class="hero__video" autoplay muted loop playsinline aria-label="Video promocional de joyas KALE">
+                    <source src="img/videoprin.mp4" type="video/mp4">
+                    Tu navegador no admite videos.
+                </video>
+            </figure>
+
+        </section>
+
+        <div class="hero__fondo" aria-hidden="true"></div>
+
+
+        <!-- categorías -->
+        <section class="categorias" id="categorias" aria-labelledby="categorias-titulo">
+            <header class="categorias__encabezado">
+                <h2 class="categorias__titulo" id="categorias-titulo">Compra por categoría</h2>
+            </header>
+
+            <div class="categorias__lista">
+
+                <article class="categorias__tarjeta">
+                    <figure class="categorias__imagen">
+                        <img src="img/manilla.jpg" alt="Colección de pulseras">
+                    </figure>
+                    <h3 class="categorias__nombre">Pulseras</h3>
+                    <a class="categorias__enlace" href="#productos">VER TODO →</a>
+                </article>
+
+                <article class="categorias__tarjeta">
+                    <figure class="categorias__imagen">
+                        <img src="img/anillo.jpg" alt="Colección de anillos">
+                    </figure>
+                    <h3 class="categorias__nombre">Anillos</h3>
+                    <a class="categorias__enlace" href="#productos">VER TODO →</a>
+                </article>
+
+                <article class="categorias__tarjeta">
+                    <figure class="categorias__imagen">
+                        <img src="img/pendiente.jpg" alt="Colección de pendientes">
+                    </figure>
+                    <h3 class="categorias__nombre">Pendientes</h3>
+                    <a class="categorias__enlace" href="#productos">VER TODO →</a>
+                </article>
+
+                <article class="categorias__tarjeta">
+                    <figure class="categorias__imagen">
+                        <img src="img/collares.jpg" alt="Colección de collares">
+                    </figure>
+                    <h3 class="categorias__nombre">Collares</h3>
+                    <a class="categorias__enlace" href="#productos">VER TODO →</a>
+                </article>
+
+                <article class="categorias__tarjeta">
+                    <figure class="categorias__imagen">
+                        <img src="img/coleccion.jpg" alt="Colecciones de joyería">
+                    </figure>
+                    <h3 class="categorias__nombre">Colecciones</h3>
+                    <a class="categorias__enlace" href="#colecciones">VER TODO →</a>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- productos más vendidos -->
+        <section class="productos" id="productos" aria-labelledby="productos-titulo">
+
+            <header class="productos__encabezado">
+                <h2 class="productos__titulo" id="productos-titulo">Más vendidos</h2>
+                <a class="productos__enlace" href="#productos">VER TODO →</a>
+            </header>
+
+            <div class="productos__lista">
+
+                <article class="productos__tarjeta">
+
+                    <figure class="productos__imagen">
+                        <span class="productos__etiqueta">NUEVO</span>
+                        <button class="productos__favorito" type="button" aria-label="Agregar Anillo Noche Estrellada a favoritos">
+                            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        </button>
+                        <img src="img/anillo noche estrellada.jpg" alt="Anillo Noche Estrellada de plata 925">
+                    </figure>
+
+                    <h3 class="productos__nombre">Anillo Noche Estrellada</h3>
+                    <p class="productos__detalle">Plata 925</p>
+                    <data class="productos__precio" value="336">Bs. 336</data>
+
+                </article>
+
+                <article class="productos__tarjeta">
+
+                    <figure class="productos__imagen">
+                        <button class="productos__favorito" type="button" aria-label="Agregar Collar Cisne a favoritos">
+                            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        </button>
+                        <img src="img/collar-cisne.jpg" alt="Collar Cisne con baño de oro 18k">
+                    </figure>
+
+                    <h3 class="productos__nombre">Collar Cisne</h3>
+                    <p class="productos__detalle">Baño de oro 18k</p>
+                    <data class="productos__precio" value="430">Bs. 430</data>
+
+                </article>
+
+                <article class="productos__tarjeta">
+
+                    <figure class="productos__imagen">
+                        <span class="productos__etiqueta">NUEVO</span>
+                        <button class="productos__favorito" type="button" aria-label="Agregar Pendientes Gota a favoritos">
+                            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        </button>
+                        <img src="img/pendiente-gota.jpg" alt="Pendientes Gota de plata 925">
+                    </figure>
+
+                    <h3 class="productos__nombre">Pendientes Gota</h3>
+                    <p class="productos__detalle">Plata 925</p>
+                    <data class="productos__precio" value="280">Bs. 280</data>
+
+                </article>
+
+                <article class="productos__tarjeta">
+
+                    <figure class="productos__imagen">
+                        <button class="productos__favorito" type="button" aria-label="Agregar Pulsera Eterna a favoritos">
+                            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        </button>
+                        <img src="img/manilla-eterna.jpg" alt="Pulsera Eterna con baño de oro 18k">
+                    </figure>
+
+                    <h3 class="productos__nombre">Pulsera Eterna</h3>
+                    <p class="productos__detalle">Baño de oro 18k</p>
+                    <data class="productos__precio" value="360">Bs. 360</data>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- colecciones -->
+        <section class="colecciones" id="colecciones" aria-label="Colecciones destacadas">
+
+            <article class="colecciones__tarjeta colecciones__tarjeta--plata">
+
+                <figure class="colecciones__imagen">
+                    <img src="img/plata1.jpg" alt="Colección de joyas de plata 925">
+                </figure>
+
+                <div class="colecciones__contenido">
+                    <p class="colecciones__etiqueta">COLECCIÓN</p>
+                    <h3 class="colecciones__titulo">Plata 925</h3>
+                    <p class="colecciones__descripcion">
+                        Brillo frío y atemporal, para uso diario.
+                    </p>
+                    <a href="#productos" class="colecciones__enlace">DESCUBRIR →</a>
+                </div>
+
+            </article>
+
+            <article class="colecciones__tarjeta colecciones__tarjeta--oro">
+
+                <figure class="colecciones__imagen">
+                    <img src="img/oro.jpg" alt="Colección de joyas con baño de oro">
+                </figure>
+
+                <div class="colecciones__contenido">
+                    <p class="colecciones__etiqueta">COLECCIÓN</p>
+                    <h3 class="colecciones__titulo">Baño de oro</h3>
+                    <p class="colecciones__descripcion">
+                        Calidez luminosa para tus momentos especiales.
+                    </p>
+                    <a href="#productos" class="colecciones__enlace">DESCUBRIR →</a>
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- historia de la marca -->
+        <section class="historia" aria-labelledby="historia-titulo">
+
+            <p class="historia__etiqueta">NUESTRA ESENCIA</p>
+
+            <h2 class="historia__titulo" id="historia-titulo">
+                Cada joya guarda una historia, y la tuya apenas comienza.
+            </h2>
+
+            <p class="historia__descripcion">
+                Diseñamos piezas minimalistas en plata 925 y oro para acompañarte
+                en lo cotidiano y en lo inolvidable.
+            </p>
+
+            <a class="historia__enlace" href="#categorias">
+                CONOCE KALE
+            </a>
+
+        </section>
+
+
+        <!-- beneficios de compra -->
+        <section class="beneficios" aria-label="Beneficios de compra">
+
+            <article class="beneficios__tarjeta">
+                <i class="beneficios__icono fa-regular fa-gem" aria-hidden="true"></i>
+                <h3 class="beneficios__titulo">Plata 925 certificada</h3>
+                <p class="beneficios__descripcion">
+                    Calidad garantizada en cada pieza.
+                </p>
+            </article>
+
+            <article class="beneficios__tarjeta">
+                <i class="beneficios__icono fa-solid fa-truck-fast" aria-hidden="true"></i>
+                <h3 class="beneficios__titulo">Envío seguro</h3>
+                <p class="beneficios__descripcion">
+                    Gratis en compras desde Bs. 300.
+                </p>
+            </article>
+
+            <article class="beneficios__tarjeta">
+                <i class="beneficios__icono fa-solid fa-arrows-rotate" aria-hidden="true"></i>
+                <h3 class="beneficios__titulo">Cambios en 30 días</h3>
+                <p class="beneficios__descripcion">
+                    Sin complicaciones.
+                </p>
+            </article>
+
+            <article class="beneficios__tarjeta">
+                <i class="beneficios__icono fa-solid fa-gift" aria-hidden="true"></i>
+                <h3 class="beneficios__titulo">Empaque de regalo</h3>
+                <p class="beneficios__descripcion">
+                    Listo para sorprender.
+                </p>
+            </article>
+
+        </section>
+
+
+        <!-- suscripción -->
+        <section class="suscripcion" aria-labelledby="suscripcion-titulo">
+
+            <div class="suscripcion__contenido">
+                <h2 class="suscripcion__titulo" id="suscripcion-titulo">Únete al círculo KALE</h2>
+                <p class="suscripcion__descripcion">
+                    Novedades, lanzamientos y 10% en tu primera compra.
+                </p>
+            </div>
+
+            <form class="suscripcion__formulario">
+
+                <label class="suscripcion__campo">
+                    <span class="suscripcion__campo-texto">Correo electrónico</span>
+                    <input
+                        class="suscripcion__input"
+                        type="email"
+                        name="correo"
+                        placeholder="Tu correo electrónico"
+                        required>
+                </label>
+
+                <button class="suscripcion__boton" type="submit">
+                    SUSCRIBIRME
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="js/main.js"></script>
+
+    </body>
+    </html>

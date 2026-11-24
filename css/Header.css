@@ -1,78 +1,61 @@
 
-/* paleta de colores y variables */
-:root {
-    --color-burdeos: #33131F;
-    --color-vino: #521B2B;
-    --color-marfil: #F9F3E9;
-    --color-dorado: #CC9E4D;
-    --color-texto: #573B43;
-    --color-borde: #C9BDB3;
-    --font-principal: Arial, sans-serif;
-    --font-logo: Georgia, serif;
-}
-
-* {
-    margin: 0; /* espacio exterior */
-    padding: 0; /* espacio interior */
-    box-sizing: border-box; /* incluye padding y borde en el tamaño */
-    font-family: var(--font-principal); /* tipo de letra */
-}
-
-
+/* encabezado principal */
 .header {
-    width: 100%; /* ancho del elemento */
-    background-color: var(--color-marfil); /* color de fondo */
-    position: sticky; /* mantiene el elemento fijo al desplazarse */
-    top: 0; /* distancia desde la parte superior */
-    z-index: 500; /* orden de superposición */
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    width: 100%;
+    background-color: var(--color-marfil);
 }
 
-
+/* anuncio superior */
 .header__anuncio {
-    background-color: var(--color-burdeos);
-    color: var(--color-dorado); /* color del texto */
-    text-align: center; /* alineación del texto */
     padding: 10px;
-    font-size: 10px; /* tamaño de letra */
-    letter-spacing: 2px; /* separación entre letras */
+    background-color: var(--color-burdeos);
+    color: var(--color-dorado);
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 2px;
 }
 
+.header__texto {
+    font-size: inherit;
+}
 
+/* contenedor de logo, buscador e iconos */
 .header__contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 40px;
-    display: flex; /* organiza los elementos en fila */
-    justify-content: space-between; /* distribución de elementos */
-    align-items: center; /* alineación vertical */
 }
-
 
 .header__logo {
     color: var(--color-burdeos);
     font-family: var(--font-logo);
-    font-size: 32px;
-    font-weight: normal; /* grosor de la letra */
+    font-size: 40px;
+    font-weight: normal;
     letter-spacing: 8px;
 }
 
-
+/* buscador */
 .header__buscador {
     display: flex;
     align-items: center;
-    gap: 10px; /* separación entre elementos */
+    gap: 10px;
     width: 235px;
-    border-bottom: 1px solid var(--color-borde); /* borde inferior */
     padding: 8px 0;
+    border-bottom: 1px solid var(--color-borde);
     color: var(--color-texto);
 }
 
-
 .header__campo {
-    border: none; /* elimina el borde */
-    outline: none; /* elimina el contorno */
-    background: transparent; /* fondo transparente */
     width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
     font-size: 12px;
 }
 
@@ -80,12 +63,11 @@
     color: var(--color-texto);
 }
 
-
 .header__buscador-icono {
     color: var(--color-texto);
 }
 
-
+/* iconos de acceso */
 .header__iconos {
     display: flex;
     align-items: center;
@@ -93,18 +75,17 @@
 }
 
 .header__enlace {
-    text-decoration: none; /* elimina el subrayado */
     color: var(--color-burdeos);
     font-size: 17px;
-    transition: 0.3s; /* duración del cambio */
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-/* efecto al pasar el mouse */
 .header__enlace:hover {
     color: var(--color-dorado);
 }
 
-
+/* menú de navegación */
 .header__menu {
     display: flex;
     justify-content: center;
@@ -113,13 +94,12 @@
     padding: 15px;
 }
 
-/* enlaces del menú */
 .header__menu-enlace {
-    text-decoration: none; /* elimina el subrayado */
     color: var(--color-texto);
     font-size: 11px;
-    font-weight: bold; /* texto en negrilla */
+    font-weight: bold;
     letter-spacing: 1px;
+    text-decoration: none;
 }
 
 .header__menu-enlace:hover {
